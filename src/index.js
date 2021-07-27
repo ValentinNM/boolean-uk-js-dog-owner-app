@@ -10,6 +10,8 @@ const dogList = document.querySelector(".dogs-list");
 
 function listCard (dogs) {
     // console.log('dogs: ', dogs);
+
+    dogList.innerHTML = " ";
     for (let i = 0; i < dogs.length; i++) {
         const dog = dogs[i];
         const dogName = dog.name;
@@ -87,98 +89,70 @@ function renderMainCard(dog) {
 
 
 
-    // maybe to use the below outside witha new
-    // function and call this function to have the data displayed
+// const addDogListCard = document.querySelector('dogs-list__button--add')
+
+// const sectionFormEl = document.createElement('section');
+
+// const addDogH2El = document.createElement ('h2');
+// addDogH2El.innerHTML = 'Add a new Dog';
+
+ 
 
 
-    // console.log("dog: ", dog);
-    // for (let i = 0; i < data.length; i++) {
-    // const oneDog = data[i];
-    // const dogName = oneDog.name;
-    // console.log("dogName: ", dogName);
-    // }
-    // return dogName;
+function renderAddDogForm(dog) {
+    console.log("dog is: ", dog);
+    const addNewH2El = document.createElement('h2');
+    addNewH2El.innerText=("Add a new dog");
 
-
-
-
-
-
-
-// function addDoggie(dog) {
-
-//     const addSectionEl = document.createElement('section');
-
-//     const addNewH2El = document.createElement('h2');
-//     addNewH2El.innerText=("Add a new dog");
-
-//     const formEl = document.createElement('form');
-//     formEl.setAttribute('class', 'form');
-//     formEl.innerText("Dogs Name");
+    const formEl = document.createElement('form');
+    formEl.setAttribute('class', 'form');
+    formEl.innerText("Dogs Name");
     
-//     const lebel1_El = document.createElement ('label');
-//     lebel1_El.setAttribute('for', 'name');
-//     lebel1_El.innerHTML("Dog's name");
+    const lebel1_El = document.createElement ('label');
+    lebel1_El.setAttribute('for', 'name');
+    lebel1_El.innerHTML("Dog's name");
 
-//     const input1_El = document.createElement ('input');
-//     input1_El.setAttribute('type', 'text');
-//     input1_El.setAttribute('id', 'name');
-//     input1_El.setAttribute('name', 'name');
+    const input1_El = document.createElement ('input');
+    input1_El.setAttribute('type', 'text');
+    input1_El.setAttribute('id', 'name');
+    input1_El.setAttribute('name', 'name');
 
-//     const lebel2_El = document.createElement ('label');
-//     lebel2_El.setAttribute('for', "name");
-//     lebel2_El.innerText("Dog's name");  
-
-
-//     const input2_El = document.createElement ('input');
-//     input2_El.setAttribute('type', 'url');
-//     input2_El.setAttribute('id', 'image');
-//     input2_El.setAttribute('name', 'image');
+    const lebel2_El = document.createElement ('label');
+    lebel2_El.setAttribute('for', "name");
+    lebel2_El.innerText("Dog's name");  
 
 
-//     const lebel3_El = document.createElement ('label');
-//     lebel3_El.setAttribute('for', 'bio')
+    const input2_El = document.createElement ('input');
+    input2_El.setAttribute('type', 'url');
+    input2_El.setAttribute('id', 'image');
+    input2_El.setAttribute('name', 'image');
 
 
-//     const textAreaEL = document.createElement('textarea');
-//     textAreaEL.setAttribute("rows", '5');
-//     textAreaEL.setAttribute('id','bio');
-//     textAreaEL.setAttribute('name', 'bio');
+    const lebel3_El = document.createElement ('label');
+    lebel3_El.setAttribute('for', 'bio')
 
 
-//     const input3_El = document.createElement ('input');
-//     input3_El.setAttribute("type", "submit");
-//     input3_El.setAttribute("id", "submit");
-//     input3_El.setAttribute("name", "submit");
-//     input3_El.setAttribute("value", "Let's adda a dog");
-//     input3_El.setAttribute("class", "form__button");
+    const textAreaEL = document.createElement('textarea');
+    textAreaEL.setAttribute("rows", '5');
+    textAreaEL.setAttribute('id','bio');
+    textAreaEL.setAttribute('name', 'bio');
 
 
-//     mainEl.append(addSectionEl, addNewH2El, formEl, lebel1_El. lebel2_El, lebel3_El,input1_El, input2_El, textAreaEL, input3_El);
+    const input3_El = document.createElement ('input');
+    input3_El.setAttribute("type", "submit");
+    input3_El.setAttribute("id", "submit");
+    input3_El.setAttribute("name", "submit");
+    input3_El.setAttribute("value", "Let's adda a dog");
+    input3_El.setAttribute("class", "form__button");
 
 
-// return addDoggie;
-// }
+    mainDogEl.append( addNewH2El, formEl, lebel1_El. lebel2_El, lebel3_El,input1_El, input2_El, textAreaEL, input3_El);
+
+
+// return renderAddDogForm;
+}
 
 // const renderAddDoggie = addDoggie(renderedSelectedDog);
 // console.log("renderAddDoggie: ", renderAddDoggie);
 
-// mainEl.append('renderAddDoggie');
-
-
-
-
-
-// dog list item
-
-
-// for (let i = 0; i < data.length; i++ ) {
-//     const oneDog = data[i];
-//     console.log("oneDog: ", oneDog);
-//     const dogName = oneDog.name;
-//     console.log("dogName: ", dogName);  
-//     const dogListEl = document.createElement('li');
-//     dogListEl.setAttribute('class', 'dogs-list__button');
-//     dogListEl.innerText='${(dogName)}'; 
-//     // console.();
-// }
+// mainDogEl.append(renderAddDogForm);
